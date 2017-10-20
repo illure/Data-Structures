@@ -24,16 +24,15 @@ int main()
 	linkList = CreateList2(linkList);
 
 	TraverseList(linkList);
-	printf("\n");
-	printf("------------------------\n");
+	printf("\n------------------------\n");
 
 	LNode *p;
 	int data;
 	p = GetElem(linkList, 4);
 	data = p->data;
 	printf("按序号查找值：%d", data);
-	printf("\n");
-	printf("------------------------\n");
+	printf("\n------------------------\n");
+
 	p = LocateElem(linkList, 55);
 	LNode *q = linkList->next;
 	int number = 1;
@@ -50,11 +49,9 @@ int main()
 		}
 	}
 	printf("按值查找结点：第%d个结点", number);
-	printf("\n");
-	printf("------------------------\n");
-	//NodeInsert(linkList, 12345, 3);
-	printf("\n");
-	printf("------------------------\n");
+	printf("\n------------------------\n");
+
+	printf("\n------------------------\n");
 
 	getchar();
 	return 0;
@@ -132,44 +129,7 @@ void TraverseList(LinkList L)
 
 void NodeInsert(LinkList L, int x, int i)
 {
-	LNode *p = L->next;
-	LNode *s, *q;
-	if (p = NULL)
-	{
-		s = (LNode *)malloc(sizeof(LNode));
-		s->data = x;
-		s->next = NULL;
-		p = s;
-	}
-	else
-	{
-		if (i = 1)
-		{
-			if (p->next = NULL)
-			{
-				s = (LNode *)malloc(sizeof(LNode));
-				s->data = x;
-				s->next = p;
-				p = s;
-			}
-			else
-			{
-				q = GetElem(L, i);
-				s = (LNode *)malloc(sizeof(LNode));
-				s->data = x;
-				s->next = q->next;
-				q->next = s;
-			}
-		}
-		else
-		{
-			q = GetElem(L, i);
-			s = (LNode *)malloc(sizeof(LNode));
-			s->data = x;
-			s->next = q->next;
-			q->next = s;
-		}
-	}
+	
 }
 
 void NodeDelete(LinkList L, int x)
