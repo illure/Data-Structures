@@ -12,7 +12,7 @@ LinkList CreateList2(LinkList L);				//尾插法
 LNode *GetElem(LinkList L, int i);				//按序号查找节点值
 LNode *LocateElem(LinkList L, int e);			//按值查找表结点
 void TraverseList(LinkList L);					//遍历
-void NodeInsert(LinkList L, int x, int i);		//插入结点
+LinkList NodeInsert(LinkList L, int x, int i);	//插入结点
 void NodeDelete(LinkList L, int x);				//删除结点
 
 #pragma warning(disable:4996)
@@ -51,6 +51,8 @@ int main()
 	printf("按值查找结点：第%d个结点", number);
 	printf("\n------------------------\n");
 
+	linkList = NodeInsert(linkList, 111, 1);
+	TraverseList(linkList);
 	printf("\n------------------------\n");
 
 	getchar();
@@ -127,9 +129,35 @@ void TraverseList(LinkList L)
 	}
 }
 
-void NodeInsert(LinkList L, int x, int i)
+LinkList NodeInsert(LinkList L, int x, int i)
 {
-	
+	LNode *s;
+	LNode *p = L->next;
+	int count = 0;
+	while (p != NULL)
+	{
+		count += 1;
+		if (i == 1 && count == 1) {
+			s = (LNode *)malloc(sizeof(LNode));
+			s->data = x;
+			s->next = p;
+			L->next = s;
+			return L;
+		}
+		else
+		{
+			if (count == i - 1)
+			{
+				s = (LNode *)malloc(sizeof(LNode));
+				s->data = x;
+				s->next = p->next;
+				p->next = s;
+				return L;
+			}
+		}
+		
+		p = p->next;
+	}
 }
 
 void NodeDelete(LinkList L, int x)
