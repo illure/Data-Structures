@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="double_linked_list.c" />
+    <ClCompile Include="h_linked_list.c" />
     <ClCompile Include="single_linked_list.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
