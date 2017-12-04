@@ -161,7 +161,7 @@ LinkList NodeInsert(LinkList L, int e, int i)
 	}
 }
 
-void NodeDelete(LinkList L, int e)
+void NodeDelete(LinkList L, int e)  //´ýÑéÖ¤
 {
 	LNode * p = LocateElem(L, e);
 	LNode * q = L->next;
