@@ -22,6 +22,31 @@ void clear(PSTACK pS);
 
 int main(void)
 {
+	STACK S;
+	int val;
+
+	init(&S);
+	push(&S, 1);
+	push(&S, 2);
+	push(&S, 3);
+	push(&S, 4);
+	push(&S, 5);
+	push(&S, 6);
+	traverse(&S);
+
+	clear(&S);
+
+	if (pop(&S, &val))
+	{
+		printf("出栈成功，出栈的元素是%d\n", val);
+	}
+	else
+	{
+		printf("出栈失败！\n");
+	}
+
+	traverse(&S);
+
 	return 0;
 }
 
@@ -63,4 +88,55 @@ void traverse(PSTACK pS)
 	printf("\n");
 
 	return;
+}
+
+bool empty(PSTACK pS)
+{
+	if (pS->pTop == pS->pBottom)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool pop(PSTACK pS, int * pVal)
+{
+	if (empty(pS))
+	{
+		return false;
+	}
+	else
+	{
+		PNODE r = pS->pTop;
+		*pVal = r->data;
+		pS->pTop = r->pNext;
+		free(r);
+		r = NULL;
+
+		return true;
+	}
+}
+
+void clear(PSTACK pS)
+{
+	if (empty(pS))
+	{
+		return;
+	}
+	else
+	{
+		PNODE p = pS->pTop;
+		PNODE q = NULL;
+
+		while (p != pS->pBottom)
+		{
+			q = p->pNext;
+			free(p);
+			p = q;
+		}
+		pS->pTop = pS->pBottom;
+	}
 }

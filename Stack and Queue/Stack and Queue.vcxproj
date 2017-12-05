@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="h_single_linked_queue.cpp" />
     <ClCompile Include="sequence_stack.c" />
     <ClCompile Include="h_single_linked_stack.c" />
   </ItemGroup>
