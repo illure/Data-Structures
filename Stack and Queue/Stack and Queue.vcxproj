@@ -111,7 +111,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Sequence stack.c" />
+    <ClCompile Include="sequence_stack.c" />
+    <ClCompile Include="h_single_linked_stack.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

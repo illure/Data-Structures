@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sequence stack.c">
+    <ClCompile Include="sequence_stack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="h_single_linked_stack.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
