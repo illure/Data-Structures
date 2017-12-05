@@ -24,5 +24,11 @@
     <ClCompile Include="h_single_linked_queue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="sequence_queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="single_linked_queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

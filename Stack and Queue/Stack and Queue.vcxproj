@@ -112,8 +112,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="h_single_linked_queue.cpp" />
+    <ClCompile Include="sequence_queue.c" />
     <ClCompile Include="sequence_stack.c" />
     <ClCompile Include="h_single_linked_stack.c" />
+    <ClCompile Include="single_linked_queue.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
