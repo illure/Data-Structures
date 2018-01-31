@@ -20,12 +20,6 @@ bool IsEmpty(LinkQueue Q);
 void EnQueue(LinkQueue Q, int x);
 bool DeQueue(LinkQueue Q, int x);
 
-int main(void)
-{
-
-
-	return 0;
-}
 
 void InitQueue(LinkQueue Q)
 {
