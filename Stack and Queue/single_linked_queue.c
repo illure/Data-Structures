@@ -72,7 +72,6 @@ bool DeQueue(LinkQueue Q, int x)
 	}
 	free(p);
 	return true;
-
 }
 
 

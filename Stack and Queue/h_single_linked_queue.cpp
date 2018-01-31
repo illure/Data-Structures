@@ -94,7 +94,7 @@ private:
 	PNODE pHead, pTail;
 };
 
-int main(void)
+int hmain(void)
 {
 	Queue Q;
 

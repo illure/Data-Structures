@@ -20,7 +20,7 @@ void traverse(PSTACK);
 bool pop(PSTACK, int *);
 void clear(PSTACK pS);
 
-int main(void)
+int hmain(void)
 {
 	STACK S;
 	int val;
