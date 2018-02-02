@@ -156,7 +156,7 @@ LinkList NodeInsert(LinkList L, int e, int i)
 				return L;
 			}
 		}
-		
+
 		p = p->next;
 	}
 }

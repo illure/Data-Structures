@@ -10,7 +10,7 @@ typedef struct Node
 	struct Node * pNext; //指针域
 }NODE, *PNODE; //NODE等价于struct Node  PNODE等价于struct Node *
 
-//函数声明
+			   //函数声明
 PNODE create_list(void); //创建链表
 void traverse_list(PNODE pHead); //遍历链表
 bool is_empty(PNODE pHead); // 判断链表是否为空
@@ -33,10 +33,10 @@ int hmain(void)
 PNODE create_list(void)
 {
 	int len; //用来存放有效节点的个数
-	int i; 
+	int i;
 	int val; //用来临时存放用户输入的结点的值
 
-	//分配了一个不存放有效数据的头节点
+			 //分配了一个不存放有效数据的头节点
 	PNODE pHead = (PNODE)malloc(sizeof(NODE));
 	if (NULL == pHead)
 	{
@@ -115,7 +115,7 @@ void sort_list(PNODE pHead)
 	int len = length_list(pHead);
 	PNODE p, q;
 
-	for (i = 0, p = pHead->pNext; i < len -1; ++i, p = p->pNext)
+	for (i = 0, p = pHead->pNext; i < len - 1; ++i, p = p->pNext)
 	{
 		for (j = i + 1, q = p->pNext; j < len; ++j, q = q->pNext)
 		{
