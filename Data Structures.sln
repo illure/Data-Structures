@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sequence List", "Sequence List\Sequence List.vcxproj", "{E5E0555F-A76D-4D93-B1F8-08516C0895DE}"
 EndProject
@@ -16,11 +16,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Find", "Find\Find.vcxproj", "{56BA02F8-7F9A-461F-98EC-D6E397A8B7A6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sort", "Sort\Sort.vcxproj", "{C0DD5B92-8B2A-401A-B5A2-06FE83C42FBA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F414D2D4-D638-4378-9E4F-FA3696DCD672}"
-	ProjectSection(SolutionItems) = preProject
-		快捷键.txt = 快捷键.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
