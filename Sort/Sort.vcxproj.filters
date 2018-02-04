@@ -27,5 +27,11 @@
     <ClCompile Include="shell_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="bubble_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="quik_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@
 void direct_insertion_sort_test();
 void direct_insertion_sort(int *a, int n);
 
-int direct_insertion_sort_main()
+int direct_insertion_sort_main()                        //÷±Ω”≤Â»Î≈≈–Ú
 {
 	direct_insertion_sort_test();
 

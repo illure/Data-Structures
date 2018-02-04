@@ -6,7 +6,7 @@
 void shell_sort_test();
 void shell_sort(int *a, int n);
 
-int main()
+int shell_sort_main()                                               //Ï£¶ûÅÅÐò
 {
 	shell_sort_test();
 

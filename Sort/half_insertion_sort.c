@@ -6,7 +6,7 @@
 void half_insertion_sort_test();
 void half_insertion_sort(int *a, int n);
 
-int half_insertion_sort_main()
+int half_insertion_sort_main()                            //’€∞Î≤Â»Î≈≈–Ú
 {
 	half_insertion_sort_test();
 
