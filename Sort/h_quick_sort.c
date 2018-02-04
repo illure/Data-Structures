@@ -5,7 +5,7 @@ void QuickSort(int *a, int low, int high);
 int FindPos(int *a, int low, int high);
 
 
-int main()
+int h_quick_sort_main()
 {
 	int a[6] = { 1, 2, 0, 5, 4, 3 };
 	QuickSort(a, 0, 5);

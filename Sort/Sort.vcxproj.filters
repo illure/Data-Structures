@@ -18,5 +18,14 @@
     <ClCompile Include="h_quick_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="direct_insertion_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="half_insertion_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shell_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
