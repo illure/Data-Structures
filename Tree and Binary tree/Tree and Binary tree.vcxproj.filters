@@ -21,5 +21,8 @@
     <ClCompile Include="h_linked_binary_tree.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="threaded_binary_tree.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

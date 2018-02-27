@@ -14,7 +14,7 @@ void PreTraverseBTree(struct BTNode *pT);
 void InTraverseBTree(struct BTNode *pT);
 void PostTraverseBTree(struct BTNode *pT);
 
-int main()
+int h_linked_binary_tree_main()
 {
 	struct BTNode *pT = CreateBTree();  //静态初始化二叉树
 	PreTraverseBTree(pT);				//先序遍历

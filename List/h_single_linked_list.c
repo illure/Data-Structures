@@ -10,7 +10,6 @@ typedef struct Node
 	struct Node * pNext; //指针域
 }NODE, *PNODE; //NODE等价于struct Node  PNODE等价于struct Node *
 
-			   //函数声明
 PNODE create_list(void); //创建链表
 void traverse_list(PNODE pHead); //遍历链表
 bool is_empty(PNODE pHead); // 判断链表是否为空
@@ -19,7 +18,7 @@ void sort_list(PNODE); //对链表进行排序
 bool insert_list(PNODE pHead, int pos, int val); //在pHead所指向链表的第pos个节点的前面插入一个新的结点，该节点的值是val， 并且pos的值是从1开始
 bool delete_list(PNODE pHead, int pos, int * pVal); //删除链表第pos个节点，并将删除的结点的值存入pVal所指向的变量中,  并且pos的值是从1开始
 
-int hmain(void)
+int h_single_linked_list_main(void)
 {
 	PNODE pHead = NULL;
 	int val;
