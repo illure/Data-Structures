@@ -119,6 +119,7 @@
     <ClCompile Include="half_insertion_sort.c" />
     <ClCompile Include="h_quick_sort.c" />
     <ClCompile Include="quik_sort.c" />
+    <ClCompile Include="select_sort.c" />
     <ClCompile Include="shell_sort.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
