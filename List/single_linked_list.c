@@ -16,7 +16,7 @@ LinkList NodeInsert(LinkList L, int e, int i);	//插入结点
 void NodeDelete(LinkList L, int e);				//按值删除结点
 
 #pragma warning(disable:4996)
-int main()
+int single_linked_list_main()
 {
 	LinkList linkList = NULL;
 

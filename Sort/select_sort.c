@@ -6,7 +6,7 @@
 void select_sort_test();
 void select_sort(int *a, int n);
 
-int main()
+int select_sort_main()
 {
 	select_sort_test();
 

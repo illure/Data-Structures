@@ -94,7 +94,7 @@ private:
 	PNODE pHead, pTail;
 };
 
-int hmain(void)
+int h_single_linked_queue_main(void)
 {
 	Queue Q;
 

@@ -7,7 +7,7 @@
 void bubble_sort_test();
 void bubble_sort(int *a, int n);
 
-int bubble_sort_test_main()
+int bubble_sort_main()
 {
 	bubble_sort_test();
 	return 0;

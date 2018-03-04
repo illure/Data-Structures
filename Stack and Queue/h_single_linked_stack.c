@@ -20,7 +20,7 @@ void traverse(PSTACK);
 bool pop(PSTACK, int *);
 void clear(PSTACK pS);
 
-int hmain(void)
+int h_single_linked_stack_main(void)
 {
 	STACK S;
 	int val;
