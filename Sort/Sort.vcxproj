@@ -117,6 +117,7 @@
     <ClCompile Include="bubble_sort.c" />
     <ClCompile Include="direct_insertion_sort.c" />
     <ClCompile Include="half_insertion_sort.c" />
+    <ClCompile Include="heap_sort.c" />
     <ClCompile Include="h_quick_sort.c" />
     <ClCompile Include="quik_sort.c" />
     <ClCompile Include="select_sort.c" />

@@ -36,5 +36,8 @@
     <ClCompile Include="select_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="heap_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
