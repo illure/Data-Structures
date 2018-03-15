@@ -3,13 +3,13 @@
 
 #define INSERTION_SORT_N 7
 
+void heap_sort_test();
 void BuildMaxHeap(int *a, int len);
 void AdjustDown(int *a, int k, int len);
 void HeapSort(int *a, int len);
 void AdjustUp(int *a, int k);
-void heap_sort_test();
 
-int main()
+int heap_sort_main()
 {
 	heap_sort_test();
 	return 0;

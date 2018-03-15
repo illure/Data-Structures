@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="h_quick_sort.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="direct_insertion_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -30,13 +27,16 @@
     <ClCompile Include="bubble_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="quik_sort.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="select_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="heap_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="merge_sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="quick_sort.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
