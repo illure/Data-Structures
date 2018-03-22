@@ -12,7 +12,7 @@ LinkList CreateList2(LinkList L);				//尾插法
 LNode *GetElem(LinkList L, int i);				//按序号查找节点值
 LNode *LocateElem(LinkList L, int e);			//按值查找表结点
 void TraverseList(LinkList L);					//遍历
-void NodeInsert(LinkList L, int e, int i);	//插入结点
+void NodeInsert(LinkList L, int e, int i);		//插入结点
 void NodeDelete(LinkList L, int e);				//按值删除结点
 
 #pragma warning(disable:4996)
@@ -28,7 +28,11 @@ int main()
 	printf("\n------------------------\n");
 	LNode *p;
 	p = GetElem(linkList, 4);
-	printf("按序号查找值：%d", p->data);
+	printf("按序号4查找值：%d", p->data);
+
+	printf("\n------------------------\n");
+	p = GetElem(linkList, 1);
+	printf("按序号1查找值：%d", p->data);
 
 	printf("\n------------------------\n");
 	p = LocateElem(linkList, 55);
@@ -46,7 +50,25 @@ int main()
 			break;
 		}
 	}
-	printf("按值查找结点：第%d个结点", number);
+	printf("按值55查找结点：第%d个结点", number);
+
+	printf("\n------------------------\n");
+	p = LocateElem(linkList, 11);
+	q = linkList->next;
+	number = 1;
+	while (q != NULL)
+	{
+		if (q != p)
+		{
+			number++;
+			q = q->next;
+		}
+		else
+		{
+			break;
+		}
+	}
+	printf("按值11查找结点：第%d个结点", number);
 
 	printf("\n------------------------\n");
 	printf("\n--在第1个位置插入值111--\n");
@@ -54,8 +76,18 @@ int main()
 	TraverseList(linkList);
 
 	printf("\n------------------------\n");
+	printf("\n--在第3个位置插入值222--\n");
+	NodeInsert(linkList, 222, 3);
+	TraverseList(linkList);
+
+	printf("\n------------------------\n");
 	printf("\n----删除值为111的结点---\n");
 	NodeDelete(linkList, 111);
+	TraverseList(linkList);
+
+	printf("\n------------------------\n");
+	printf("\n----删除值为222的结点---\n");
+	NodeDelete(linkList, 222);
 	TraverseList(linkList);
 
 	getchar();
@@ -134,34 +166,27 @@ void TraverseList(LinkList L)
 
 void NodeInsert(LinkList L, int e, int i)
 {
-	LNode *s;
-	LNode *p = L->next;
-	int count = 0;
-	while (p != NULL)
+	if (i == 1)
 	{
-		count += 1;
-		if (i == 1 && count == 1) {
-			s = (LNode *)malloc(sizeof(LNode));
-			s->data = e;
-			s->next = p;
-			L->next = s;
-		}
-		else
-		{
-			if (count == i - 1)
-			{
-				s = (LNode *)malloc(sizeof(LNode));
-				s->data = e;
-				s->next = p->next;
-				p->next = s;
-			}
-		}
-
-		p = p->next;
+		LNode * s;
+		s = (LNode*)malloc(sizeof(LNode));
+		s->data = e;
+		s->next = L->next;
+		L->next = s;
+	}
+	else
+	{
+		LNode * p = GetElem(L, i - 1);
+		LNode * q = p->next;
+		LNode * s;
+		s = (LNode*)malloc(sizeof(LNode));
+		s->data = e;
+		p->next = s;
+		s->next = q;
 	}
 }
 
-void NodeDelete(LinkList L, int e)  //待验证
+void NodeDelete(LinkList L, int e)
 {
 	LNode * p = LocateElem(L, e);
 	LNode * q = L->next;
