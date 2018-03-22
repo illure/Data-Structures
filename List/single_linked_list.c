@@ -12,11 +12,11 @@ LinkList CreateList2(LinkList L);				//尾插法
 LNode *GetElem(LinkList L, int i);				//按序号查找节点值
 LNode *LocateElem(LinkList L, int e);			//按值查找表结点
 void TraverseList(LinkList L);					//遍历
-LinkList NodeInsert(LinkList L, int e, int i);	//插入结点
+void NodeInsert(LinkList L, int e, int i);	//插入结点
 void NodeDelete(LinkList L, int e);				//按值删除结点
 
 #pragma warning(disable:4996)
-int single_linked_list_main()
+int main()
 {
 	LinkList linkList = NULL;
 
@@ -24,15 +24,13 @@ int single_linked_list_main()
 	linkList = CreateList2(linkList);
 
 	TraverseList(linkList);
-	printf("\n------------------------\n");
 
+	printf("\n------------------------\n");
 	LNode *p;
-	int data;
 	p = GetElem(linkList, 4);
-	data = p->data;
-	printf("按序号查找值：%d", data);
-	printf("\n------------------------\n");
+	printf("按序号查找值：%d", p->data);
 
+	printf("\n------------------------\n");
 	p = LocateElem(linkList, 55);
 	LNode *q = linkList->next;
 	int number = 1;
@@ -49,12 +47,16 @@ int single_linked_list_main()
 		}
 	}
 	printf("按值查找结点：第%d个结点", number);
-	printf("\n------------------------\n");
 
-	printf("\n--在第1个位置插入值111--\n");
-	linkList = NodeInsert(linkList, 111, 1);
-	TraverseList(linkList);
 	printf("\n------------------------\n");
+	printf("\n--在第1个位置插入值111--\n");
+	NodeInsert(linkList, 111, 1);
+	TraverseList(linkList);
+
+	printf("\n------------------------\n");
+	printf("\n----删除值为111的结点---\n");
+	NodeDelete(linkList, 111);
+	TraverseList(linkList);
 
 	getchar();
 	return 0;
@@ -130,7 +132,7 @@ void TraverseList(LinkList L)
 	}
 }
 
-LinkList NodeInsert(LinkList L, int e, int i)
+void NodeInsert(LinkList L, int e, int i)
 {
 	LNode *s;
 	LNode *p = L->next;
@@ -143,7 +145,6 @@ LinkList NodeInsert(LinkList L, int e, int i)
 			s->data = e;
 			s->next = p;
 			L->next = s;
-			return L;
 		}
 		else
 		{
@@ -153,7 +154,6 @@ LinkList NodeInsert(LinkList L, int e, int i)
 				s->data = e;
 				s->next = p->next;
 				p->next = s;
-				return L;
 			}
 		}
 
@@ -165,20 +165,18 @@ void NodeDelete(LinkList L, int e)  //待验证
 {
 	LNode * p = LocateElem(L, e);
 	LNode * q = L->next;
-	LNode * left;
-	if (q = p)
+	if (p == q)
 	{
-		L->next = q->next;
+		L->next = p->next;
+		free(p);
 	}
-	while (q->next != NULL)
+	else
 	{
-		if (q->next = p)
-		{
-			q->next = p->next;
-		}
-		else
+		while (q != NULL && q->next != NULL && q->next != p)
 		{
 			q = q->next;
 		}
+		q->next = p->next;
+		free(p);
 	}
 }
